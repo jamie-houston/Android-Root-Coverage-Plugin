@@ -83,6 +83,9 @@ class RootCoveragePlugin : Plugin<Project> {
             //     }
             // }
             rootFolderPatterns.add("jacoco.exec")
+
+            // Android Build Tools Plugin 7.0+
+            buildFolderPatterns.add("outputs/unit_test_code_coverage/*/*.exec")
         }
         if (rootProjectExtension.includeAndroidTestResults()) {
             // Android Build Tools Plugin 3.2
